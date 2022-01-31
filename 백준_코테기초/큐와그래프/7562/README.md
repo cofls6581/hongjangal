@@ -1,2 +1,2 @@
-문제 링크
+臾몄젣 留곹겕
 https://www.acmicpc.net/problem/7562
