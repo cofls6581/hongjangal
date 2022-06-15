@@ -1,3 +1,8 @@
+/*
+일반칸인 경우 next[x] = x;
+사다리 or 뱀칸인 경우 next[x] = y;
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <queue>
