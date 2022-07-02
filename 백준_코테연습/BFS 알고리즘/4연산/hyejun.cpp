@@ -8,10 +8,6 @@ using namespace std;
 
 const long long limit = 1000000000LL;
 
-void bfs(int s, int t) {
-
-}
-
 int main() {
 	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
 	// input
