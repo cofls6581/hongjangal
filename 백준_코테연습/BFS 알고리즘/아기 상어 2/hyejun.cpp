@@ -6,8 +6,6 @@
 
 using namespace std;
 
-// bool visited[50][50];
-// int dist[50][50];
 int dx[8] = { 0,0,1,1,1,-1,-1,-1 };
 int dy[8] = { 1,-1,1,-1,0,1,-1,0 };
 
