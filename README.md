@@ -25,3 +25,10 @@
 
 ### 스터디일지 노션 링크  
 https://www.notion.so/90e756695644424ab2f8a0b66171f762  
+
+매주 꾸준히 문제를 풀어오고 있습니다.  
+1년간 스터디원들의 백준 랭킹 히스토리는 아래와 같습니다.  
+
+![image](https://user-images.githubusercontent.com/67696767/189073714-b89ff929-f7f9-4499-b18a-084be4c3873f.png)
+![image](https://user-images.githubusercontent.com/67696767/189073740-9471bc7a-fe78-453f-8eda-822293a11479.png)
+![image](https://user-images.githubusercontent.com/67696767/189073762-0a13bb8e-b40b-46b8-914a-50c694f8ecd0.png)
