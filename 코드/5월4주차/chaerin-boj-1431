@@ -1,0 +1,45 @@
+/**
+ * @file 1431.cpp
+ * @date 2023-05-24
+ * 정렬 커스텀 함수는 두 수가 같지 않을 때 처리 필요한 거 유의
+ */
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int n;
+vector<string> v;
+
+bool cmp (string a, string b) {
+    int lena = a.size(), lenb = b.size();
+    int suma = 0, sumb = 0;
+
+    for(int i = 0; i < lena; i++){
+        if(isdigit(a[i])) suma += (a[i] - '0');
+    }
+    for(int i = 0; i < lenb; i++){
+        if(isdigit(b[i])) sumb += (b[i] - '0');
+    }
+        
+    if(lena != lenb) return lena < lenb;
+    if(suma != sumb) return suma < sumb;
+    
+    return a < b;
+}
+
+int main () {
+    ios::sync_with_stdio(0); cin.tie(NULL);
+    cin>>n;
+    string s;
+    
+    for(int i=0;i<n;++i){
+        cin>>s;
+        v.push_back(s);
+    }
+    
+    sort(v.begin(),v.end(),cmp);
+    for(auto i : v) cout << i << '\n';
+    return 0;
+}
