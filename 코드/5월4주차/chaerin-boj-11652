@@ -1,0 +1,48 @@
+/**
+ * @file 11652.cpp
+ * @date 2023-05-26
+ * 
+ * input으로 들어오는 수의 범위가 -2^62~2^62로 long long 자료형 사용해야함
+ * 2^62=4,611,686,018,427,387,904
+ * int 자료형 최대값 = 2,147,483,647
+ * long long 자료형 최대값 = 9,223,372,036,854,775,807
+ * 
+ */
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int n;
+
+int main () {
+    ios::sync_with_stdio(0); cin.tie(NULL);
+    cin>>n;
+    vector <long long> arr;
+    long long temp;
+    for(int i=0;i<n;++i){
+        cin>>temp;
+        arr.push_back(temp);
+    }
+    sort(arr.begin(),arr.end());
+
+    int cnt=0;
+    int mxcnt=0;
+    long long mxval = -(1ll << 62) - 1; //최소값보다 1 작은 값
+
+     for(int i = 0; i < n; i++){
+        if(i == 0 || arr[i-1] == arr[i]) cnt++; 
+        else{
+            if(cnt > mxcnt){
+                mxcnt = cnt;
+                mxval = arr[i-1];
+            }
+            cnt = 1; //새로운 숫자
+        }
+    }
+
+    if(cnt > mxcnt) mxval = arr[n-1];
+    cout << mxval;
+    return 0;
+}
