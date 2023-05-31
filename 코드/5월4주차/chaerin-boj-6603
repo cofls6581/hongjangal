@@ -1,0 +1,56 @@
+/**
+ * @file 6603.cpp
+ * @date 2023-05-24
+ * input으로 0이 들어오면 종료되는 형식
+ * while문에 input 값 조건문 체크로 break;
+ * 
+ * next_permutation 함수 사용시 아래와 같은 코드 사용
+ * 출력원하는 수 개수만큼만 0으로 마스킹하고 나머지는 1로 
+ * for (int i = 6; i < k; i++)
+      mask[i] = 1; 
+ *  do {
+      for (int i = 0; i < k; i++) {
+        if (!mask[i]) cout << arr[i] << " ";
+      }
+      cout << '\n';
+    } while (next_permutation(mask, mask + k));
+ */
+
+#include <iostream>
+using namespace std;
+
+int arr[14];
+int ans[14]; 
+int k;
+
+void solve(int cur, int cnt) {
+    if(cnt==6){
+        for (int i = 0; i < 6; i++){
+            cout << ans[i] << ' ';
+        } 
+        cout << '\n';
+        return;
+    }
+
+    for(int i=cur;i<k;++i){
+        ans[cnt]=arr[i];
+        solve(i+1,cnt+1);
+    }
+
+}
+
+int main () {
+    ios::sync_with_stdio(0); cin.tie(NULL);
+    while(1){
+        cin>>k;
+        if(!k){
+            break;            
+        }
+        for(int i=0;i<k;++i){
+            cin>>arr[i];
+        }
+        solve(0,0);
+        cout << '\n';
+    }
+    return 0;
+}
