@@ -6,7 +6,6 @@ using namespace std;
 
 int n,m;
 map<string, int> mp;
-map<int, string> mp2;
 string a[MAX];
 string s;
 
@@ -17,7 +16,6 @@ int main () {
     for(int i=1; i<=n; ++i){
         cin >> s; 
 		mp[s] = i;  
-		mp2[i] = s; 
         a[i] = s;
     }
 
